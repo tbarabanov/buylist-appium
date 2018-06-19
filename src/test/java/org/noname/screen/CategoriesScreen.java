@@ -67,11 +67,11 @@ public class CategoriesScreen extends BaseScreen {
      * @return
      */
     public boolean hasCategory(String name) {
-        boolean result = false;
+        boolean result = true;
         try {
             listView.scrollIntoViewItem(name);
-            result = true;
         } catch (NoSuchElementException ignored) {
+            result = false;
         }
         return result;
     }
