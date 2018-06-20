@@ -28,7 +28,7 @@ public abstract class CapabilitiesProvider {
         providers.put(CONFIGURATION, ClassPathPropertiesFileCapabilitiesProvider::new);
     }
 
-    private CapabilitiesProvider() {
+    protected CapabilitiesProvider() {
     }
 
     /**

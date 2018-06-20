@@ -47,7 +47,6 @@
         </dependency>
     </dependencies>
 
-    <!--mvn clean package –DskipTests=true-->
     <build>
         <plugins>
             <plugin>
@@ -82,6 +81,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--mvn clean package –DskipTests=true-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.5.4</version>
@@ -101,6 +101,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--mvn clean test-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -111,9 +112,11 @@
                     </argLine>
                     <systemPropertyVariables>
                         <capabilities.provider>configuration</capabilities.provider>
+                        <!--configured in appium.properties-->
                         <!--<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>-->
                         <appium.url>https://eu1.appium.testobject.com/wd/hub</appium.url>
                     </systemPropertyVariables>
+                    <!--see annotation @Listeners-->
                     <!--<properties>-->
                     <!--<property>-->
                     <!--<name>listener</name>-->
@@ -129,6 +132,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <!--mvn allure:serve-->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>

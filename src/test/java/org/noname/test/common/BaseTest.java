@@ -29,7 +29,7 @@ public class BaseTest {
                 new URL(getProperty(APPIUM_URL_PROPERTY_KEY,
                         DEFAULT_APPIUM_URL)),
                 getInstance(getProperty(CAPABILITIES_PROVIDER_PROPERTY_KEY,
-                        AWS)).get());
+                        CONFIGURATION)).get());
     }
 
     @AfterTest
