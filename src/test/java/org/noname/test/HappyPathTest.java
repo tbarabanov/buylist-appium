@@ -7,7 +7,7 @@ import io.qameta.allure.Story;
 import org.noname.core.allure.TakingScreenshotOnTestFailureListener;
 import org.noname.screen.*;
 import org.noname.screen.SettingsScreen.Currency;
-import org.noname.test.common.BaseTest;
+import org.noname.test.common.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -21,7 +21,7 @@ import static org.noname.screen.MyListAddScreen.Unit.BOTTLES;
 @Epic("GridU Mobile Test Automation")
 @Feature("HappyPath Main Features")
 @Listeners({TakingScreenshotOnTestFailureListener.class})
-public class HappyPathTest extends BaseTest {
+public class HappyPathTest extends TestBase {
 
     @Description("create a new empty shopping list")
     @Story("B-12345")

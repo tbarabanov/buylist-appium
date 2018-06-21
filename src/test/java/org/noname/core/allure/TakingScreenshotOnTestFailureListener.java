@@ -1,7 +1,7 @@
 package org.noname.core.allure;
 
 import io.qameta.allure.Attachment;
-import org.noname.test.common.BaseTest;
+import org.noname.test.common.TestBase;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
@@ -14,8 +14,8 @@ public class TakingScreenshotOnTestFailureListener extends TestListenerAdapter {
 
     @Override
     public void onTestFailure(ITestResult tr) {
-        if (BaseTest.class.isAssignableFrom(tr.getInstance().getClass())) {
-            takeScreenshot(BaseTest.class.cast(tr.getInstance()).getDriver());
+        if (TestBase.class.isAssignableFrom(tr.getInstance().getClass())) {
+            takeScreenshot(TestBase.class.cast(tr.getInstance()).getDriver());
         }
     }
 
