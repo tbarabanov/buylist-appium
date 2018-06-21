@@ -241,7 +241,6 @@ public class HappyPathTest extends TestBase {
 
         mainScreen = new MainScreen(getDriver());
 
-        // takeScreenshot();
         Assert.assertTrue(mainScreen.getShoppingListSummary(0).contains(currency));
     }
 
