@@ -91,4 +91,4 @@ see [allure project docs](http://allure.qatools.ru/)
 1. set `testobject_api_key= `
 2. follow the instruction provided by `SauceLabs`, to configure `Capabilities` change/set them in `${baseDir}/src/test/resources/appium.properties`
 3. execute `mvn clean test` from `${baseDir}`
-4. to generate local report execute `mvn allure:serve` to see allure report
+4. to generate local report execute `mvn allure:serve`
