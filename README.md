@@ -82,7 +82,7 @@ see [allure project docs](http://allure.qatools.ru/)
 >1. run appium server
 >2. run android emulator, or connect a device
 >3. go to project  `${baseDir}/test/resources/appium.properties`
->4. change `app` property to full system path of  Shopping list-1.6.apk"
+>4. change `app` property to full system path of Shopping list-1.6.apk (`opt/BuyList.apk`)
 >5. if needed change `deviceName` property (to check connected run `adb devices` in terminal)
 >6. execute `mvn clean test` from `${baseDir}`
 >7. execute `mvn allure:serve` to see allure report
