@@ -69,13 +69,13 @@ see [allure project docs](http://allure.qatools.ru/)
 2. new currency has been created and applied to products on `MainScreen`
 
 ## How to Run
->### requirements
->- allure (for local run)
->- android sdk (for local run)
->- android emulator/or android device (for local run)
->- appium (for local run)
->- maven
->- project on your file system (root of the project is `${baseDir}`)
+### requirements
+- allure (for local run)
+- android sdk (for local run)
+- android emulator/or android device (for local run)
+- appium (for local run)
+- maven
+- project on your file system (root of the project is `${baseDir}`)
 
 ### Local Execution
 1. run appium server
