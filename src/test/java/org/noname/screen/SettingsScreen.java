@@ -261,7 +261,7 @@ public class SettingsScreen extends BaseScreen {
         listView.scrollIntoViewItem(name);
         boolean isItemChecked = listView.isItemChecked(name);
         if ((mark && !isItemChecked)
-                || (!mark && listView.isItemChecked(name))) {
+                || (!mark && isItemChecked)) {
             listView.getItemByName(name).click();
         }
     }
