@@ -35,14 +35,14 @@ public class TestBase {
 
     @AfterTest
     public void tearDownAppium() {
-        if (getDriver() != null)
-            getDriver().quit();
+        if (driver != null)
+            driver.quit();
     }
 
     @AfterMethod
     public void cleanUpTheApp() {
-        if (getDriver() != null)
-            getDriver().resetApp();
+        if (driver != null)
+            driver.resetApp();
     }
 
     /**
