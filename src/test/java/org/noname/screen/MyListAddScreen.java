@@ -42,14 +42,10 @@ public class MyListAddScreen extends BaseScreen {
     @AndroidFindBy(id = "com.slava.buylist:id/spinner2")
     private MobileElement mSpinner2;
 
-    @AndroidFindBy(id = "com.slava.buylist:id/textView2")
-    private MobileElement mTotal;
-
     @AndroidFindBy(id = "com.slava.buylist:id/button1")
     private MobileElement mMenu;
 
     private ListView listView = new ListView();
-
 
     /**
      * @param driver
@@ -175,13 +171,6 @@ public class MyListAddScreen extends BaseScreen {
     /**
      * @return
      */
-    public String getTotal() {
-        return mTotal.getText();
-    }
-
-    /**
-     * @return
-     */
     @Step("open 'settings' screen from menu options")
     public SettingsScreen openSettingsScreen() {
         mMenu.click();
@@ -233,7 +222,7 @@ public class MyListAddScreen extends BaseScreen {
     /**
      * class for products list
      */
-    protected class ListView extends PageFactoryObject {
+    private class ListView extends PageFactoryObject {
 
         @AndroidFindBy(id = "com.slava.buylist:id/item")
         List<MobileElement> mItems;
@@ -329,7 +318,7 @@ public class MyListAddScreen extends BaseScreen {
     /**
      * spinner for number and category
      */
-    protected class Spinner1 extends PageFactoryObject {
+    private class Spinner1 extends PageFactoryObject {
 
         @AndroidFindBy(id = "android:id/text1")
         List<MobileElement> mItems;

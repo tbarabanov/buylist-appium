@@ -14,13 +14,21 @@ public class AddScreen extends MyListAddScreen {
     @AndroidFindBy(id = "com.slava.buylist:id/button1")
     private MobileElement mMenu;
 
-    private ListView listView = new ListView();
+    @AndroidFindBy(id = "com.slava.buylist:id/textView2")
+    private MobileElement mTotal;
 
     /**
      * @param driver
      */
     public AddScreen(AppiumDriver driver) {
         super(driver);
+    }
+
+    /**
+     * @return
+     */
+    public String getTotal() {
+        return mTotal.getText();
     }
 
     /**
