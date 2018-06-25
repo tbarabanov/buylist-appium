@@ -17,7 +17,7 @@ import static com.google.common.io.Resources.getResource;
  */
 public abstract class CapabilitiesProvider {
 
-    private static final Map<String, Supplier<CapabilitiesProvider>> providers = new HashMap();
+    private static final Map<String, Supplier<CapabilitiesProvider>> providers = new HashMap<>();
 
     public static final String CAPABILITIES_PROVIDER_PROPERTY_KEY = "capabilities.provider";
     public static final String AWS = "aws";
