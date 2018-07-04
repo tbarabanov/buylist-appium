@@ -3,6 +3,7 @@ package org.noname.test.common;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.noname.core.appium.CapabilitiesProvider;
+import org.openqa.selenium.Capabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,18 +20,17 @@ import static org.noname.core.appium.CapabilitiesProvider.CONFIGURATION;
 public class TestBase {
 
     public static final String APPIUM_URL_PROPERTY_KEY = "appium.url";
-    public static final String DEFAULT_APPIUM_URL = "http://localhost:4723/wd/hub";
 
     private AppiumDriver driver;
 
     @BeforeTest
     public void setUpAppium() throws IOException {
         // android app only
-        driver = new AndroidDriver(
-                new URL(System.getProperty(APPIUM_URL_PROPERTY_KEY,
-                        DEFAULT_APPIUM_URL)),
-                CapabilitiesProvider.getInstance(System.getProperty(CAPABILITIES_PROVIDER_PROPERTY_KEY,
-                        CONFIGURATION)).get());
+        Capabilities capabilities = CapabilitiesProvider.getInstance(
+                System.getProperty(CAPABILITIES_PROVIDER_PROPERTY_KEY, CONFIGURATION)).get();
+        String appiumServerURL = System.getProperty(APPIUM_URL_PROPERTY_KEY);
+        driver = appiumServerURL == null ? new AndroidDriver(capabilities)
+                : new AndroidDriver(new URL(appiumServerURL), capabilities);
     }
 
     @AfterTest
