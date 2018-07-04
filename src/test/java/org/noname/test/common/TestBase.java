@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.net.URL;
 
-import static org.noname.core.appium.CapabilitiesProvider.CAPABILITIES_PROVIDER_PROPERTY_KEY;
 import static org.noname.core.appium.CapabilitiesProvider.CONFIGURATION;
 
 /**
@@ -19,6 +18,7 @@ import static org.noname.core.appium.CapabilitiesProvider.CONFIGURATION;
  */
 public class TestBase {
 
+    public static final String CAPABILITIES_PROVIDER_PROPERTY_KEY = "capabilities.provider";
     public static final String APPIUM_URL_PROPERTY_KEY = "appium.url";
 
     private AppiumDriver driver;
